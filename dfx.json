@@ -1,0 +1,63 @@
+{
+  "canisters": {
+    "student_identity_service": {
+      "type": "rust",
+      "package": "student_identity_service",
+      "candid": "src/studifi_backend/student_identity_service/student_identity_service.did"
+    },
+    "credit_assessment_service": {
+      "type": "rust",
+      "package": "credit_assessment_service",
+      "candid": "src/studifi_backend/credit_assessment_service/credit_assessment_service.did"
+    },
+    "loan_management_service": {
+      "type": "rust",
+      "package": "loan_management_service",
+      "candid": "src/studifi_backend/loan_management_service/loan_management_service.did"
+    },
+    "dao_governance_service": {
+      "type": "rust",
+      "package": "dao_governance_service",
+      "candid": "src/studifi_backend/dao_governance_service/dao_governance_service.did"
+    },
+    "compliance_service": {
+      "type": "rust",
+      "package": "compliance_service",
+      "candid": "src/studifi_backend/compliance_service/compliance_service.did"
+    },
+    "authentication_service": {
+      "type": "rust",
+      "package": "authentication_service",
+      "candid": "src/studifi_backend/authentication_service/authentication_service.did"
+    },
+    "university_credential_service": {
+      "type": "rust",
+      "package": "university_credential_service",
+      "candid": "src/studifi_backend/university_credential_service/university_credential_service.did"
+    },
+    "studifi_frontend": {
+      "dependencies": [
+        "student_identity_service",
+        "credit_assessment_service",
+        "loan_management_service",
+        "dao_governance_service",
+        "compliance_service",
+        "authentication_service",
+        "university_credential_service"
+      ],
+      "source": [
+        "src/studifi_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "studifi_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

@@ -1,0 +1,22 @@
+[workspace]
+members = [
+    "src/studifi_backend/loan_management_service",
+    "src/studifi_backend/compliance_service",
+    "src/studifi_backend/dao_governance_service",
+    "src/studifi_backend/student_identity_service",
+    "src/studifi_backend/credit_assessment_service",
+    "src/studifi_backend/university_credential_service",
+    "src/studifi_backend/authentication_service",
+    "src/studifi_backend/shared"
+]
+resolver = "2"
+
+[workspace.dependencies]
+candid = "0.10"
+ic-cdk = "0.17"
+ic-cdk-timers = "0.11"
+ic-stable-structures = "0.6"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+anyhow = "1.0"
